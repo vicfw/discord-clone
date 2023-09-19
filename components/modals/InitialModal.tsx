@@ -24,7 +24,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-// import { FileUpload } from "@/components/file-upload";
+import { FileUpload } from "@/components/fileUpload";
 import { useRouter } from "next/navigation";
 
 const formSchema = z.object({
@@ -86,7 +86,7 @@ export const InitialModal = () => {
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
             <div className="space-y-8 px-6">
-              {/* <div className="flex items-center justify-center text-center">
+              <div className="flex items-center justify-center text-center">
                 <FormField
                   control={form.control}
                   name="imageUrl"
@@ -102,7 +102,7 @@ export const InitialModal = () => {
                     </FormItem>
                   )}
                 />
-              </div> */}
+              </div>
 
               <FormField
                 control={form.control}
