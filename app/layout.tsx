@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import { ThemeProvider } from "@/components/providers/themeProvider";
 import { cn } from "@/lib/utils";
+import { ModalProvider } from "@/components/providers/modalProvider";
 
 const font = Open_Sans({ subsets: ["latin"] });
 
@@ -27,6 +28,7 @@ export default function RootLayout({
             enableSystem={false}
             storageKey="discord-theme"
           >
+            <ModalProvider />
             {children}
           </ThemeProvider>
         </body>
@@ -34,4 +36,4 @@ export default function RootLayout({
     </ClerkProvider>
   );
 }
-// 2:02:29
+// 4:06:00
