@@ -57,6 +57,7 @@ export const ChatMessages = ({
       paramKey,
       paramValue,
     });
+
   useChatSocket({ queryKey, addKey, updateKey });
   useChatScroll({
     chatRef,
@@ -109,7 +110,7 @@ export const ChatMessages = ({
       <div className="flex flex-col-reverse mt-auto">
         {data?.pages?.map((group: any, i: number) => (
           <Fragment key={i}>
-            {group.items.map((message: MessageWithMemberWithProfile) => (
+            {group?.items.map((message: MessageWithMemberWithProfile) => (
               <ChatItem
                 key={message.id}
                 id={message.id}

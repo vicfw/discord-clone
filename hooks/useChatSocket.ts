@@ -55,6 +55,8 @@ export const useChatSocket = ({
     });
 
     socket.on(addKey, (message: MessageWithMemberWithProfile) => {
+      console.log("socket working");
+
       queryClient.setQueryData([queryKey], (oldData: any) => {
         if (!oldData || !oldData.pages || oldData.pages.length === 0) {
           return {
